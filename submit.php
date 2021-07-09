@@ -58,48 +58,19 @@ $configstream = fopen ($configpath, "w");
 fwrite($configstream, $type);
 fclose($configstream);
 
-$type = str_replace("&lt;", "<", $type);
-$type = str_replace("&gt;", ">", $type);
-$type = str_replace("&quot;", "\"", $type);
-
-$guardTitle = str_replace("&lt;", "<", $guardTitle);
-$guardTitle = str_replace("&gt;", ">", $guardTitle);
-$guardTitle = str_replace("&quot;", "\"", $guardTitle);
-
-$guardSubTitle = str_replace("&lt;", "<", $guardSubTitle);
-$guardSubTitle = str_replace("&gt;", ">", $guardSubTitle);
-$guardSubTitle = str_replace("&quot;", "\"", $guardSubTitle);
-
-$type = str_replace("<style>", "&lt;style&gt;", $type);
-$type = str_replace("</style>", "&lt;/style&gt;", $type);
-$type = str_replace("<script>", "&lt;script&gt;", $type);
-$type = str_replace("</script>", "&lt;/script&gt;", $type);
-$type = str_replace("<?php", "&lt;?php", $type);
-$type = str_replace("?>", "?&gt;", $type);
-$configpath = $currentuserid;
-$configstream = fopen ($configpath .= "_p_saved_hover", "w");
-fwrite($configstream, $p_saved_hover);
-fclose($configstream);
-
 /*$p_saved_hover = str_replace("<style>", "<script type=\"text/plain\"><i>&lt;style&gt;</i></script>", $p_saved_hover);*/
-$p_saved_hover = str_replace("<style>", "&lt;style&gt;", $p_saved_hover);
-$p_saved_hover = str_replace("</style>", "&lt;/style&gt;", $p_saved_hover);
-$p_saved_hover = str_replace("<script>", "&lt;script&gt;", $p_saved_hover);
-$p_saved_hover = str_replace("</script>", "&lt;/script&gt;", $p_saved_hover);
-$p_saved_hover = str_replace("<?php", "&lt;?php", $p_saved_hover);
-$p_saved_hover = str_replace("?>", "?&gt;", $p_saved_hover);
+$p_saved_hover = str_replace("<", "&lt;", $p_saved_hover);
+$p_saved_hover = str_replace(">", "&gt;", $p_saved_hover);
+$p_saved_hover = str_replace("'", "&quot;", $p_saved_hover);
 $configpath = $currentuserid;
 $configstream = fopen ($configpath .= "_p_saved_hover", "w");
 fwrite($configstream, $p_saved_hover);
 fclose($configstream);
 
 /*$p_saved_click = str_replace("<style>", "<script type=\"text/plain\"><i>&lt;style&gt;</i></script>", $p_saved_click);*/
-$p_saved_click = str_replace("<style>", "&lt;style&gt;", $p_saved_click);
-$p_saved_click = str_replace("</style>", "&lt;/style&gt;", $p_saved_click);
-$p_saved_click = str_replace("<script>", "&lt;script&gt;", $p_saved_click);
-$p_saved_click = str_replace("</script>", "&lt;/script&gt;", $p_saved_click);
-$p_saved_click = str_replace("<?php", "&lt;?php", $p_saved_click);
-$p_saved_click = str_replace("?>", "?&gt;", $p_saved_click);
+$p_saved_click = str_replace("<", "&lt;", $p_saved_click);
+$p_saved_click = str_replace(">", "&gt;", $p_saved_click);
+$p_saved_click = str_replace("'", "&quot;", $p_saved_click);
 $configpath = $currentuserid;
 $configstream = fopen ($configpath .= "_p_saved_click", "w");
 fwrite($configstream, $p_saved_click);

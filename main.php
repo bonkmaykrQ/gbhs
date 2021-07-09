@@ -78,6 +78,21 @@ if ($type == "hl2") {
 	$fh .= "'";
 	$fc .= "https://bonkmaykr.xyz/gbhs/assets/quake_click.mp3";
 	$fc .= "'";
+}else if ($type == "kss") {
+	$fh .= "https://bonkmaykr.xyz/gbhs/assets/kss_hover.mp3";
+	$fh .= "'";
+	$fc .= "https://bonkmaykr.xyz/gbhs/assets/kss_click.mp3";
+	$fc .= "'";
+}else if ($type == "sa1") {
+	$fh .= "https://bonkmaykr.xyz/gbhs/assets/sa1_hover.wav";
+	$fh .= "'";
+	$fc .= "https://bonkmaykr.xyz/gbhs/assets/sa1_click.wav";
+	$fc .= "'";
+}else if ($type == "ps2") {
+	$fh .= "https://bonkmaykr.xyz/gbhs/assets/ps2_hover.mp3";
+	$fh .= "'";
+	$fc .= "https://bonkmaykr.xyz/gbhs/assets/ps2_click.mp3";
+	$fc .= "'";
 }else if ($type == "custom") {
 	$fh .= $p_saved_hover;
 	$fh .= "'";
